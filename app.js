@@ -45,6 +45,12 @@ class UI {
         list.appendChild(row);
     }
 
+    static deleteBook(el) {
+        if(el.classList.contains('delete')) {
+            el.parentElement.parentElement.remove();
+        }
+    }
+
     static clearFields() {
         document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
@@ -55,11 +61,9 @@ class UI {
 //Store Class: Handles storage
 
 //Event: Display books
-
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 //Event: Add a book
-
 document.querySelector('#book-form').addEventListener('submit', (e) => {
     
     //Prevent actual submit
@@ -81,3 +85,6 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 });
 
 //Event: Delete a book
+document.querySelector('#book-list').addEventListener('click', (e) => {
+    UI.deleteBook(e.target);
+});
