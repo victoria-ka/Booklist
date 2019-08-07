@@ -21,7 +21,7 @@ class UI {
            {
                title: 'Book Two',
                author: 'Jane Doe',
-               isbn: '4550925';
+               isbn: '4550925'
            }
        ];
        
@@ -39,7 +39,7 @@ class UI {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
-        <td><a href="#" class="btn btn-danger btn-sm delete"X</a></td>
+        <td><a href="#" class="btn btn-danger btn-sm/ delete">X</a></td>
         `;
 
         list.appendChild(row);
